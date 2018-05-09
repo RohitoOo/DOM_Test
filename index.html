@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+<!-- <button id="1">Click me</button> -->
+
+<button id='hello' onclick=myFun()>CLICK ME </button>
+
+
+<div id="here"></div>
+
+</body>
+
+<style>
+button {
+  margin-top: 20px;
+  line-height: 60px;
+  width: 100%;
+  font-weight: bold;
+  padding: 0 40px;
+  background: salmon;
+  border: none;
+}
+</style>
+
+<script>
+var body = document.getElementsByTagName('button')
+
+var i=1;
+function myFun(){
+
+   var create = document.createElement('button')
+
+  create.setAttribute("class", "abc")
+  document.getElementById('here').append(create)
+  var abc = document.getElementsByClassName('abc')[i].innerHTML = i + " Yaas!"
+i++
+}
+
+
+</script>
+</html>
